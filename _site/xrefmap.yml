@@ -1,0 +1,31 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: ConsoleAppProject
+  name: ConsoleAppProject
+  href: api/ConsoleAppProject.html
+  commentId: N:ConsoleAppProject
+  fullName: ConsoleAppProject
+  nameWithType: ConsoleAppProject
+- uid: ConsoleAppProject.Program
+  name: Program
+  href: api/ConsoleAppProject.Program.html
+  commentId: T:ConsoleAppProject.Program
+  fullName: ConsoleAppProject.Program
+  nameWithType: Program
+- uid: ConsoleAppProject.Program.Main(System.String[])
+  name: Main(string[])
+  href: api/ConsoleAppProject.Program.html#ConsoleAppProject_Program_Main_System_String___
+  commentId: M:ConsoleAppProject.Program.Main(System.String[])
+  name.vb: Main(String())
+  fullName: ConsoleAppProject.Program.Main(string[])
+  fullName.vb: ConsoleAppProject.Program.Main(String())
+  nameWithType: Program.Main(string[])
+  nameWithType.vb: Program.Main(String())
+- uid: ConsoleAppProject.Program.Main*
+  name: Main
+  href: api/ConsoleAppProject.Program.html#ConsoleAppProject_Program_Main_
+  commentId: Overload:ConsoleAppProject.Program.Main
+  isSpec: "True"
+  fullName: ConsoleAppProject.Program.Main
+  nameWithType: Program.Main

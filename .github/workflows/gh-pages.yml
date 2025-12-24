@@ -1,0 +1,50 @@
+name: Deploy DocFX to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install DocFX
+        shell: cmd
+        run: |
+          choco install docfx -y
+
+      - name: Build documentation
+        shell: cmd
+        run: |
+          docfx docfx\docfx.json
+
+      - name: Disable Jekyll
+        shell: cmd
+        run: echo.> docfx\_site\.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docfx\_site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

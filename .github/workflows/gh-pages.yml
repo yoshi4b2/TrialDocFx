@@ -30,7 +30,7 @@ jobs:
 
       - name: Disable Jekyll
         shell: cmd
-        run: echo.> docfx\_site\.nojekyll
+        run: echo.> _site\.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
